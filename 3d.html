@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book Movie Tickets</title>
+</head>
+<body>
+    <h1>movie ticket booking</h1>
+    <label>No of tickets:</label>
+    <input type="text" id="n">
+    <input type="button" onclick="calculate()" value="book tickets">
+  <script>
+    function calculate() {
+        let noof=document.getElementById('n').value;
+        let price=noof*150;
+        let  discount=price*0.1;
+        let total=price-discount;
+    if(noof<=2){
+      alert("total price"+(price));
+    }else if(noof>=6){
+      alert("Booking is not allowed");
+    }else if(noof<=6){
+        alert("total price"+(total));
+    }
+}
+  </script>
+</body>
+</html>
