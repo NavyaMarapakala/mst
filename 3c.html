@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book Movie Tickets</title>
+</head>
+<body>
+    <h1>book movie tickets online</h1>
+    <table>
+        
+        <tr>
+        <td><label>Number of Tickets:</label></td>
+        <td><input type="text" id="nooftickets"><br></td>
+        </tr>
+        <tr>
+        <td><label>price per ticket:</label></td>
+        <td><input type="text" placeholder="150" id="pricepereach" disabled><br></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="button" id="button" value="calculate the price" onClick=Calculatetotal()></td>
+        </tr>
+        <tr>
+            <td>price:</td>
+            <td><input type="text" id="p"></td>
+        </tr>
+        <tr>
+            <td>Discount Amount:</td>
+            <td><input type="text" id="d"></td>
+        </tr>
+        <tr>
+            <td>Total Amount:</td>
+            <td><input type="text" id="t"></td>
+        </tr>
+    </table>   
+
+    
+  <script>
+    function Calculatetotal() {
+        let noof= document.getElementById('nooftickets').value;
+        let price=noof*150;
+        let discounted=price*0.1;
+        let total=price-discounted;
+       let pr=document.getElementById("p") ;
+       pr.value=price;
+       let di=document.getElementById("d") ;
+       di.value=discounted;
+       let to=document.getElementById("t") ;
+       to.value=total;
+      
+    }
+   
+  </script>
+</body>
+</html>
